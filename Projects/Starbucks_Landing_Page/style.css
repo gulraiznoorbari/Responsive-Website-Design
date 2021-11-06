@@ -5,6 +5,13 @@
     font-family: "Poppins", sans-serif;
 }
 
+:root {
+    --black: #333;
+    --white: #fff;
+    --green: #017143;
+    --black2: #fff;
+}
+
 section {
     position: relative;
     width: 100%;
@@ -13,7 +20,7 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: white;
+    background: var(--white);
 }
 
 header {
@@ -25,9 +32,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 10000;
 }
 
-.header .logo {
+header .logo {
     position: relative;
     max-width: 80px;
 }
@@ -35,18 +43,25 @@ header {
 header ul {
     position: relative;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header ul li {
     list-style: none;
+    display: flex;
+    margin-left: 35px;
 }
 
 header ul li a {
     display: inline-block;
-    color: #333;
-    font-weight: 400;
-    margin-left: 40px;
+    color: var(--black);
+    font-weight: 500;
     text-decoration: none;
+}
+
+header ul li a:hover {
+    color: var(--green);
 }
 
 .content {
@@ -60,32 +75,35 @@ header ul li a {
 .content .textBox {
     position: relative;
     max-width: 600px;
-    margin-top: 10rem;
+    margin-top: 9rem;
 }
 
 .content .textBox h2 {
-    color: #333;
+    color: var(--black);
     font-size: 4rem;
     line-height: 1.4em;
     font-weight: 500;
 }
 
 .content .textBox h2 span {
-    color: #017143;
+    color: var(--green);
     font-size: 1.2em;
     font-weight: 900;
 }
+.dark .content .textBox h2 span {
+    color: #008b51;
+}
 
 .content .textBox p {
-    color: #333;
+    color: var(--black);
 }
 
 .content .textBox a {
     display: inline-block;
     margin-top: 20px;
     padding: 8px 20px;
-    background: #017143;
-    color: white;
+    background: var(--green);
+    color: #fff;
     border-radius: 40px;
     font-weight: 500;
     letter-spacing: 1px;
@@ -150,13 +168,42 @@ header ul li a {
     filter: invert(1);
 }
 
+.dark {
+    --black: #fff;
+    --white: #113828;
+    --black2: #124e36;
+}
+
+.themeSwitch {
+    /* position: relative; */
+    width: 40px;
+    height: 40px;
+    background: var(--black);
+    display: flex;
+    border-radius: 50%;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.themeSwitch::before {
+    content: "\f186";
+    font-family: fontAwesome;
+    color: var(--white);
+    font-size: 20px;
+}
+
+.themeSwitch.active::before {
+    content: "\f185";
+}
+
 .circle {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: #017143;
+    background: var(--green);
     clip-path: circle(600px at right 800px);
 }
 
@@ -191,6 +238,9 @@ header ul li a {
         background-position: center;
         background-repeat: no-repeat;
     }
+    .dark .toggle {
+        filter: invert(0);
+    }
     header ul.navigation.active {
         position: fixed;
         top: 0;
@@ -201,12 +251,16 @@ header ul li a {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        background: white;
+        background: var(--white);
         z-index: 10;
+    }
+    header ul li {
+        margin: 10px 0;
+        margin-left: 0;
     }
     header ul li a {
         font-size: 1.5em;
-        margin: 5px 0;
+        font-weight: 300;
     }
     section {
         padding: 20px 20px 120px;
@@ -236,7 +290,7 @@ header ul li a {
     }
 
     .sci {
-        background: #017143;
+        background: var(--green);
         right: 0;
         width: 50px;
         border-top-left-radius: 5px;
