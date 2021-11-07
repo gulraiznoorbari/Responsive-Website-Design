@@ -6,8 +6,56 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Netflix Landing Page</title>
         <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
     </head>
     <body>
+        <header>
+            <a href="#" class="logo"><img src="./images/logo.png" /></a>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">TV Shows</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">Latest</a></li>
+                <li><a href="#">My List</a></li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="Search" />
+                <i class="fas fa-search"></i>
+            </div>
+        </header>
+        <div class="banner">
+            <img src="./images/bg.jpg" class="bg" />
+            <div class="content">
+                <img src="./images/name.png" class="movieTitle" />
+                <h4>
+                    <span>2020</span>
+                    <span><i>12+</i></span>
+                    <span>1hr 55min</span>
+                    <span>Action</span>
+                </h4>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam eveniet
+                    veritatis consequuntur saepe ipsa debitis excepturi dolore, esse necessitatibus.
+                    Nobis illo itaque culpa architecto exercitationem similique, illum vitae
+                    perferendis praesentium!
+                </p>
+                <div class="buttons">
+                    <a href="#"><i class="fas fa-play" aria-hidden="true"></i> Play</a>
+                    <a href="#"><i class="fas fa-plus" aria-hidden="true"></i> My List</a>
+                </div>
+            </div>
+            <a class="play" onclick="toggleVideo();"
+                ><img src="./images/play.png" />Watch Trailer</a
+            >
+        </div>
+        <div class="trailer">
+            <video src="./video.mp4" controls autoplay></video>
+            <img src="./images/close.png" class="close" onclick="toggleVideo();" />
+        </div>
         <script src="main.js"></script>
     </body>
 </html>
