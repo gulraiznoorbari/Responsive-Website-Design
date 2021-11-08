@@ -7,8 +7,72 @@
         <title>Grocery Website</title>
         <link rel="stylesheet" href="style.css" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+            rel="stylesheet"
+        />
     </head>
     <body>
-        <script src="main.js"></script>
+        <header class="header">
+            <a href="#" class="logo"><i class="fas fa-shopping-basket"></i> Groco </a>
+            <nav class="navbar">
+                <a href="#home">Home</a>
+                <a href="#features">Features</a>
+                <a href="#products">Products</a>
+                <a href="#categories">Categories</a>
+                <a href="#review">Review</a>
+                <a href="#blogs">Blogs</a>
+            </nav>
+            <div class="icons">
+                <div class="fas fa-bars" id="menu-btn"></div>
+                <div class="fas fa-search" id="search-btn"></div>
+                <div class="fas fa-shopping-cart" id="cart-btn"></div>
+                <div class="fas fa-user" id="login-btn"></div>
+            </div>
+            <form action="" class="search-form">
+                <input type="search" id="search-btn" placeholder="search here..." />
+                <label for="search-box" class="fas fa-search"></label>
+            </form>
+            <div class="shopping-cart">
+                <div class="box">
+                    <i class="fas fa-trash"></i>
+                    <img src="./images/cart-img-1.png" />
+                    <div class="content">
+                        <h3>watermelon</h3>
+                        <span class="price">$4.99/-</span>
+                        <span class="quantity">Qty : 1</span>
+                    </div>
+                </div>
+                <div class="box">
+                    <i class="fas fa-trash"></i>
+                    <img src="./images/cart-img-2.png" />
+                    <div class="content">
+                        <h3>onion</h3>
+                        <span class="price">$4.99/-</span>
+                        <span class="quantity">Qty : 1</span>
+                    </div>
+                </div>
+                <div class="box">
+                    <i class="fas fa-trash"></i>
+                    <img src="./images/cart-img-3.png" />
+                    <div class="content">
+                        <h3>chicken</h3>
+                        <span class="price">$4.99/-</span>
+                        <span class="quantity">Qty : 1</span>
+                    </div>
+                </div>
+                <div class="total">total : $19.69/-</div>
+                <a href="#" class="btn">checkout</a>
+            </div>
+            <form action="" class="login-form">
+                <h3>login now</h3>
+                <input type="email" placeholder="email" class="box" />
+                <input type="email" placeholder="password" class="box" />
+                <p>Forgot Password? <a href="#">click here</a></p>
+                <p>Don't have a account <a href="#">create one</a></p>
+                <input type="submit" value="login now" class="btn" />
+            </form>
+        </header>
+        <script src="script.js"></script>
     </body>
 </html>
